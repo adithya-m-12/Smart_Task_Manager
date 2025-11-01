@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📝 Task Manager</h1>
+        
+        <div class="ai-input">
+            <input type="text" id="ai-task-input" placeholder="Try 'Meeting with team tomorrow at 3pm (High priority)'">
+            <button id="ai-quick-add">✨ AI Quick Add</button>
+        </div>
+
+        <div class="task-input">
+            <input type="text" id="task-name" placeholder="Task name" required>
+            <select id="task-priority">
+                <option value="High">High Priority</option>
+                <option value="Medium" selected>Medium Priority</option>
+                <option value="Low">Low Priority</option>
+            </select>
+            <div class="datetime-container">
+                <input type="date" id="task-date" required>
+                <input type="time" id="task-time" required>
+            </div>
+            <button id="add-task-btn">➕ Add Task</button>
+            <button id="archive-tasks-btn">🗄 Archive All</button>
+        </div>
+
+        <div class="filters">
+            <input type="text" id="search-task" placeholder="Search tasks...">
+            <button id="filter-all">All</button>
+            <button id="filter-active">Active</button>
+            <button id="filter-archived">Archived</button>
+        </div>
+
+        <div class="progress">
+            <span id="task-count">0 tasks</span>
+        </div>
+
+        <ul id="task-list"></ul>
+
+        <button class="clear-btn" id="clear-tasks-btn">❌ Clear All Tasks</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
